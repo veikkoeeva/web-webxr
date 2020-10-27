@@ -1,0 +1,25 @@
+  {
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "lib": ["esnext", "dom"],
+    "strict": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "outDir": "out-tsc",
+    "sourceMap": true,
+    "inlineSources": true,
+    "allowJs": true,
+    "noImplicitAny": false,
+    "rootDir": "./"
+  },
+  "include": ["**/*.ts"],
+  "typeRoots": [
+    "./typings",
+    "./node_modules/@types/"
+  ]
+}
