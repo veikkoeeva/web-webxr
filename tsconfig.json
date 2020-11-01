@@ -1,5 +1,9 @@
   {
   "compilerOptions": {
+    //The JS compiler in the second step optimizes when doing a relase build.
+    "removeComments": false,
+
+    "forceConsistentCasingInFileNames": true,
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
@@ -13,13 +17,11 @@
     "outDir": "out-tsc",
     "sourceMap": true,
     "inlineSources": true,
-    "allowJs": true,
+    "allowJs": false,
     "noImplicitAny": false,
-    "rootDir": "./"
+    "rootDir": "./",
+
+    "strictNullChecks": false
   },
-  "include": ["**/*.ts"],
-  "typeRoots": [
-    "./typings",
-    "./node_modules/@types/"
-  ]
+  "include": ["**/*.ts"]
 }

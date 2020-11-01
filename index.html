@@ -7,11 +7,13 @@
   <meta name="Description" content="Demo using georeferened sensor data.">
   <base href="/">
   
+  <!--
   <script src="https://unpkg.com/d3@6.2.0/dist/d3.min.js"></script>
   <script src="https://unpkg.com/deck.gl@^8.3.1/dist.min.js"></script>
   <script src="https://unpkg.com/mapbox-gl@1.12.0/dist/mapbox-gl.js"></script>  
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/mapbox-gl@1.12.0/dist/mapbox-gl.css">
-  
+  -->
+  <!--
   <style type="text/css">
         #map {
             position: absolute;
@@ -28,12 +30,15 @@
             padding: 0
         }
     </style>
+    -->
   <title>Sensor data demo</title>
 </head>
 
 <body>
-<!-- <web-webxr></web-webxr> -->
-<div id="map"></div>
+<web-webxr></web-webxr>
+<p>Test</p>
+<!-- <div id="map"></div> -->
+<script type="module" src="./out-tsc/src/web-webxr.js"></script>
 <script type="module">
     /*      
     import mapboxgl from 'mapbox-gl';
@@ -41,6 +46,7 @@
     import { MapboxLayer } from '@deck.gl/mapbox/dist/esm';
     //import * as mapboxgl from 'mapbox-gl';
     */
+    /*
     const { MapboxLayer, HexagonLayer } = deck;
     const map = new mapboxgl.Map({
         container: 'map',
@@ -96,7 +102,7 @@
         });
 
         map.addLayer(hexagonLayer, "waterway");
-    });
+    });*/
 </script>
 </body>
 
