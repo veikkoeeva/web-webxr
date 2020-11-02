@@ -65,7 +65,7 @@ export class WebWebxr extends LitElement {
     // mapboxgl.Map
     // tries to "import fs from 'fs';" at import from node_modules/@loaders.gl/core/dist/esm/node/read-file-sync.node.js
     // here and it crashes loading the web component. What could be done?
-    /*
+  
   this.map = new mapboxgl.Map({
       container: mapContainer,
       style: 'https://api.maptiler.com/maps/84873d64-1572-4d4d-92ff-dec92410f211/style.json?key=<snip>',
@@ -124,7 +124,7 @@ export class WebWebxr extends LitElement {
     this.map.addLayer(hexagonLayer, "waterway");
 
     this.map.on('load', ev => {      
-  });*/
+  });
   }
 
   render() {

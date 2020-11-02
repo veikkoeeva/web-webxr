@@ -12,7 +12,7 @@
     "storybook:build": "build-storybook",
     "build": "rimraf dist && tsc && rollup -c rollup.config.js",
     "start:build": "npm run build && web-dev-server --root-dir dist --app-index index.html --open --compatibility none",
-    "start": "concurrently --kill-others --names tsc,web-dev-server \"npm run tsc:watch\" \"web-dev-server --app-index index.html --node-resolve --open --watch\"",
+    "start": "concurrently --kill-others --names tsc,web-dev-server \"npm run tsc:watch\" \"web-dev-server --app-index index.html\"",
     "tsc:watch": "tsc --watch"
   },
   "eslintConfig": {
@@ -24,19 +24,7 @@
   "prettier": {
     "singleQuote": true,
     "arrowParens": "avoid"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.ts": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
-    ]
-  },
+  },  
   "name": "web-webxr",
   "version": "0.0.0",
   "description": "Webcomponent web-webxr following open-wc recommendations",
@@ -58,12 +46,15 @@
     "@open-wc/demoing-storybook": "^2.0.0",
     "@open-wc/eslint-config": "^2.0.0",
     "@open-wc/testing": "^2.0.0",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
     "@types/d3": "^5.16.3",
     "@types/mapbox-gl": "^1.12.5",
     "@types/node": "13.11.1",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.20.0",
     "@web/dev-server": "^0.0.12",
+    "@web/dev-server-rollup": "^0.2.10",
     "@web/test-runner": "^0.7.41",
     "concurrently": "^5.1.0",
     "deepmerge": "^4.2.2",
