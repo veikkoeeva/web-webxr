@@ -1,6 +1,4 @@
 import merge from 'deepmerge';
-import resolve from '@rollup/plugin-node-resolve';
-
 // use createSpaConfig for bundling a Single Page App
 import { createSpaConfig } from '@open-wc/building-rollup';
 
@@ -19,11 +17,7 @@ const baseConfig = createSpaConfig({
   developmentMode: process.env.ROLLUP_WATCH === 'true',
 
   // set to true to inject the service worker registration into your index.html
-  nodeResolve: { browser: true },
   injectServiceWorker: false,
-  plugins: [    
-    resolve({ browser: true })
-  ]
 });
 
 export default merge(baseConfig, {

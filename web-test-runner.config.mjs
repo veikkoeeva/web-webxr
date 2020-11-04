@@ -1,4 +1,4 @@
 export default {
-  files: 'out-tsc/test/**/*.test.js',
+  files: 'dist/**/test/**/*.test.js',
   nodeResolve: true
 };
